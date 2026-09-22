@@ -1,0 +1,28 @@
+Here’s a good interview explanation:
+
+“My project is a Selenium WebDriver automation framework built in Python for an e-commerce purchase flow using the TutorialsNinja demo application.
+
+The framework follows the Page Object Model design pattern. Each web page has its own class—for example, `HomePage`, `LoginPage`, `SearchPage`, and `CartPage`. This keeps locators and page-specific actions separate from the test logic, making the framework easier to maintain.
+
+The test starts by loading configuration values such as the application URL, browser, timeout, credentials, and demonstration delay from the `.env` file. Sensitive credentials are kept out of source code and test-data files.
+
+Test data is read from both JSON and Excel files. JSON contains the seed data, and the framework generates an Excel file when required. A separate test confirms that the data in both sources is consistent.
+
+The main automation workflow is:
+
+1. Launch Chrome or Firefox using a centralized WebDriver factory.
+2. Open the TutorialsNinja application.
+3. Navigate to the login page and authenticate using configured credentials.
+4. Search for a product, currently `iPhone`.
+5. Add the first matching product to the cart.
+6. Open the cart and update its quantity, currently to `2`.
+7. Verify the product name, quantity, unit price, and line total.
+8. Capture screenshots after login, after adding the product, after cart verification, and automatically if a test fails.
+9. Handle JavaScript alerts safely if they appear.
+10. Generate a self-contained HTML execution report using `pytest-html`.
+
+For demonstration purposes, I added configurable delays between browser actions and character-by-character typing. The delay is controlled using `ACTION_DELAY` in the `.env` file.
+
+Pytest manages the test lifecycle. The `conftest.py` file creates the browser before a test, closes it afterward, captures failure screenshots, and clears screenshots from earlier runs before each new execution.”
+
+If asked about benefits, say: “The main benefits are reusability, maintainability, secure configuration handling, external test data, visual evidence through screenshots, and clear reporting for stakeholders.”
