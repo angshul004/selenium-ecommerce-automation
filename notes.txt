@@ -26,3 +26,62 @@ For demonstration purposes, I added configurable delays between browser actions 
 Pytest manages the test lifecycle. The `conftest.py` file creates the browser before a test, closes it afterward, captures failure screenshots, and clears screenshots from earlier runs before each new execution.”
 
 If asked about benefits, say: “The main benefits are reusability, maintainability, secure configuration handling, external test data, visual evidence through screenshots, and clear reporting for stakeholders.”
+
+
+
+
+### Code workflow
+
+`pytest` starts `test_customer_can_search_add_and_update_cart()` in `tests/test_purchase_workflow.py`.
+
+The test creates page objects and calls their methods in sequence:
+
+```text
+HomePage → LoginPage → SearchPage → CartPage
+```
+
+It logs in, searches for a product, adds it to the cart, updates quantity, and validates cart details.
+
+### Environment variable access and passing
+
+Values in `.env` are loaded by `utils/config.py` using `python-dotenv`.
+
+```python
+load_dotenv(ROOT / ".env")
+```
+
+They are stored in the `settings` object:
+
+```python
+settings.email
+settings.password
+settings.base_url
+settings.timeout
+```
+
+The test passes required values to page-object methods:
+
+```python
+LoginPage(driver, settings.timeout).login(
+    settings.email,
+    settings.password
+)
+```
+
+### Website element access
+
+Each page class stores Selenium locators using `By`, for example:
+
+```python
+EMAIL = (By.ID, "input-email")
+LOGIN_BUTTON = (By.CSS_SELECTOR, "input[value='Login']")
+```
+
+`BasePage` provides reusable methods:
+
+```python
+self.type(self.EMAIL, email)
+self.click(self.LOGIN_BUTTON)
+```
+
+These methods use `WebDriverWait` to wait until an element is visible or clickable before interacting with it. This avoids failures caused by slow page loading.
