@@ -17,18 +17,12 @@ pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-Edit `.env` with the demo account credentials. The first test run automatically creates `data/test_data.xlsx` from the JSON seed data; this keeps the binary spreadsheet out of source control while still exercising Excel input.
+Then edit `.env` with your account credentials. The first test run automatically creates `data/test_data.xlsx` from the JSON seed data; this keeps the binary spreadsheet out of source control while still exercising Excel input.
 
 ## Run
 
 ```powershell
 pytest
-```
-
-Run without a visible browser:
-
-```powershell
-$env:HEADLESS='true'; pytest
 ```
 
 Outputs:
