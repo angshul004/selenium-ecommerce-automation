@@ -32,6 +32,8 @@ If asked about benefits, say: “The main benefits are reusability, maintainabil
 
 ### Code workflow
 
+ The first test run automatically creates `Capstone Project/data/test_data.xlsx` from the JSON seed data; this keeps the binary spreadsheet out of source control while still exercising Excel input.
+
 `pytest` starts `test_customer_can_search_add_and_update_cart()` in `tests/test_purchase_workflow.py`.
 
 The test creates page objects and calls their methods in sequence:

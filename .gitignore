@@ -1,8 +1,5 @@
 __pycache__/
 .pytest_cache/
 .venv/
-reports/*.html
-reports/*.xml
-screenshots/*.png
-data/*.xlsx
+myenv/
 .env
