@@ -13,9 +13,9 @@ name_box = driver.find_element(
     "name"
 )
 
-name_box.send_keys("Subhradip")
+name_box.send_keys("angshul")
 
-print("1. By.ID: Name entered as Subhradip")
+print("1. By.ID: Name entered as angshul")
 
 # 2. BY.XPATH
 radio2 = driver.find_element(
@@ -88,6 +88,6 @@ assert driver.title.strip() != ""
 
 print("9. Page title verified")
 
-print("\nMulti-Locator Challenge PASSED by Subhradip")
+print("\nMulti-Locator Challenge PASSED by angshul")
 
 driver.quit()

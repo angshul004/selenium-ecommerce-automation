@@ -24,11 +24,11 @@ def test_name_field(driver):
     )
 
     name_box.clear()
-    name_box.send_keys("Subhradip")
+    name_box.send_keys("angshul")
 
-    assert name_box.get_attribute("value") == "Subhradip"
+    assert name_box.get_attribute("value") == "angshul"
 
-    print("Name field test passed for Subhradip")
+    print("Name field test passed for angshul")
 
 
 @pytest.mark.smoke
@@ -63,7 +63,7 @@ def test_checkbox(driver):
 
 @pytest.mark.parametrize(
     "name",
-    ["Subhradip", "Rahul", "Selenium"]
+    ["angshul", "Rahul", "Selenium"]
 )
 def test_multiple_names(driver, name):
     name_box = WebDriverWait(driver, 10).until(

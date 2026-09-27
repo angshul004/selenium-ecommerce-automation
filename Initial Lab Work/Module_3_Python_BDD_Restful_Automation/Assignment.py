@@ -15,16 +15,16 @@ driver.get("https://rahulshettyacademy.com/AutomationPractice/")
 assert driver.title.strip() != ""
 print(f"Page title test passed: '{driver.title}'")
 
-# Enter name field branded with Subhradip
+# Enter name field branded with angshul
 name_field = wait.until(
     EC.visibility_of_element_located((By.ID, "name"))
 )
 
 name_field.clear()
-name_field.send_keys("Subhradip")
+name_field.send_keys("angshul")
 
-assert name_field.get_attribute("value") == "Subhradip"
-print("Name field test passed for Subhradip")
+assert name_field.get_attribute("value") == "angshul"
+print("Name field test passed for angshul")
 
 # Select Radio2
 radio2 = wait.until(
@@ -47,7 +47,7 @@ alert_button = wait.until(
 
 alert_button.click()
 
-# Verify alert text contains Subhradip
+# Verify alert text contains angshul
 alert = wait.until(
     EC.alert_is_present()
 )
@@ -55,11 +55,11 @@ alert = wait.until(
 print("Alert text:", alert.text)
 
 assert alert is not None
-assert "Subhradip" in alert.text
+assert "angshul" in alert.text
 
 alert.accept()
 
 print("Alert test passed")
-print("All Selenium tests passed successfully by Subhradip")
+print("All Selenium tests passed successfully by angshul")
 
 driver.quit()

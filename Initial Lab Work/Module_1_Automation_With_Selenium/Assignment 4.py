@@ -18,9 +18,9 @@ name_box = wait.until(
     )
 )
 
-name_box.send_keys("Subhradip")
+name_box.send_keys("angshul")
 
-print("1. Name entered as Subhradip")
+print("1. Name entered as angshul")
 
 # 2. JAVASCRIPT ALERT
 alert_button = wait.until(
@@ -40,7 +40,7 @@ alert = driver.switch_to.alert
 
 print("2. Alert text:", alert.text)
 
-assert "Hello Subhradip" in alert.text
+assert "Hello angshul" in alert.text
 
 alert.accept()
 
@@ -53,7 +53,7 @@ name_box = wait.until(
         (By.ID, "name")
     )
 )
-name_box.send_keys("Subhradip")
+name_box.send_keys("angshul")
 
 confirm_button = wait.until(
     EC.element_to_be_clickable(
@@ -72,7 +72,7 @@ confirm = driver.switch_to.alert
 
 print("4. Confirm text:", confirm.text)
 
-assert "Hello Subhradip" in confirm.text
+assert "Hello angshul" in confirm.text
 
 # Accept the confirm
 confirm.accept()
@@ -102,6 +102,6 @@ confirm.dismiss()
 
 print("7. Confirm dismissed")
 
-print("\nAssignment 4 - JavaScript Alerts & Confirms PASSED by Subhradip")
+print("\nAssignment 4 - JavaScript Alerts & Confirms PASSED by angshul")
 
 driver.quit()

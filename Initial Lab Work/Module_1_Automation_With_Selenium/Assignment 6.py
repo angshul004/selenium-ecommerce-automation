@@ -16,8 +16,8 @@ try:
     name_box = wait.until(
         EC.visibility_of_element_located((By.ID, "name"))
     )
-    name_box.send_keys("Subhradip")
-    print("Tester Name entered: Subhradip")
+    name_box.send_keys("angshul")
+    print("Tester Name entered: angshul")
 except Exception:
     pass
 
@@ -112,6 +112,6 @@ print("11. Switched back to main page")
 # 13. FINAL VERIFICATION
 assert driver.current_window_handle == main_window
 
-print("\nAssignment 6 - Windows, Tabs & Iframes PASSED by Subhradip")
+print("\nAssignment 6 - Windows, Tabs & Iframes PASSED by angshul")
 
 driver.quit()

@@ -13,7 +13,7 @@ Practice Waits And Synchronization
     Wait Until Page Contains     Practice Page                     10s
 
     Wait Until Element Is Visible     id=name                      10s
-    Input Text                   id=name                           subhradip
+    Input Text                   id=name                           angshul
 
     Wait Until Element Is Enabled     id=name                      10s
 

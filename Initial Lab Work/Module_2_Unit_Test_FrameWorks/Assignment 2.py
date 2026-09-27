@@ -22,11 +22,11 @@ class TestSetupTeardown:
         )
 
         name_box.clear()
-        name_box.send_keys("Subhradip")
+        name_box.send_keys("angshul")
 
-        assert name_box.get_attribute("value") == "Subhradip"
+        assert name_box.get_attribute("value") == "angshul"
 
-        print("Name test passed for Subhradip")
+        print("Name test passed for angshul")
 
     def test_radio(self, driver):
         radio = driver.find_element(

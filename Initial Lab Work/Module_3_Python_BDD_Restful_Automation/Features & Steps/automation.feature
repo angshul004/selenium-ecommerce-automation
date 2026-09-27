@@ -8,7 +8,7 @@ Feature: Selenium Automation Practice
   Scenario: Enter name
     Given the Edge browser is opened
     When the user navigates to the Automation Practice page
-    And the user enters name "Subhradip"
+    And the user enters name "angshul"
     Then the name should be entered successfully
 
   Scenario: Select radio button
@@ -20,6 +20,6 @@ Feature: Selenium Automation Practice
   Scenario: Handle alert
     Given the Edge browser is opened
     When the user navigates to the Automation Practice page
-    And the user enters name "Subhradip"
+    And the user enters name "angshul"
     And the user clicks the Alert button
-    Then the alert should be displayed with text containing "Subhradip"
+    Then the alert should be displayed with text containing "angshul"
