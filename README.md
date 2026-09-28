@@ -1,3 +1,7 @@
+# Name
+Angshul sana
+# Enrolment Number
+1202300200123
 # Repository structure
 
 Folder 1 - Initial Lab Work and Video Demonstrations: Include the videos prepared during the initial classes and the corresponding module-wise lab work.
