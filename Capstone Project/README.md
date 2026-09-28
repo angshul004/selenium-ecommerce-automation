@@ -3,6 +3,7 @@
 An end-to-end Python/Selenium project for purchasing a product on the [TutorialsNinja demo store](https://tutorialsninja.com/demo/). It covers login, product search, cart updates and verification, screenshots, alert handling, Excel/JSON test data, and an HTML execution report.
 
 ## Demonstration Video link
+https://drive.google.com/file/d/1_L-LBdMb6xTIpECEG7JoPnoN6JQadPjd/view?usp=sharing
 
 ## Prerequisites
 

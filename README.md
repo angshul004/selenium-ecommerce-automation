@@ -7,3 +7,5 @@ Folder 2 - Capstone Project: Include the complete source code, project report, o
 
 
 Folder 3 - Certificates: Include all certificates earned through the prescribed courses.
+
+project video deonstration: https://drive.google.com/file/d/1_L-LBdMb6xTIpECEG7JoPnoN6JQadPjd/view?usp=sharing
