@@ -15,7 +15,7 @@ from utils.helpers import accept_alert_if_present, capture_screenshot
     not settings.email or not settings.password,
     reason="Set DEMO_EMAIL and DEMO_PASSWORD in .env before running this login test.",
 )
-def test_customer_can_search_add_and_update_cart(driver): #Pytest starts from this test function
+def test_customer_can_search_add_and_update_cart(driver): #Pytest starts from this test function:
     json_data = read_json()
     excel_data = read_excel()
     assert json_data["product"] == excel_data["product"], "JSON and Excel product data differ"
